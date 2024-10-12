@@ -21,7 +21,7 @@ You no longer have to set up clocks and pass them to `esp_hal_embassy::init`.
 
      let timg0 = TimerGroup::new(peripherals.TIMG0);
 -    esp_hal_embassy::init(&clocks, timg0);
-+    esp_hal_embassy::init(timg0);
++    esp_hal_embassy::init(timg0.timer0);
 
      // ...
  }
